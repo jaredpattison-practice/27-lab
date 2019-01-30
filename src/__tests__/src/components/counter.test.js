@@ -4,7 +4,8 @@ import Counter from "../../../components/counter/counter.js";
 
 describe("<counter />", () => {
   it("exists", () => {
-    expect(true).toBeTruthy();
+    let component = shallow(<Counter />);
+    expect(component.find('section').exists()).toBeTruthy();
   });
 
   it("changes state on a click down", () => {
@@ -20,4 +21,9 @@ describe("<counter />", () => {
     button.simulate("click");
     expect(component.state("count")).toEqual(1);
   });
+
+  it('renders correctly', () => {
+    const tree = renderer.create(<Counter />).toJSON();
+    expect(tree).toMatchSnapshot();
+  })
 });
