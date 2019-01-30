@@ -1,0 +1,67 @@
+@import "./reset.scss";
+
+$rootColor: lightgrey;
+$accentColor: grey;
+$bleed: purple;
+$space: 10px;
+$black: #181818;
+
+header {
+  text-align: center;
+  color: $bleed;
+  background-color: $rootColor;
+  height: 20px;
+  margin-bottom: 10px;
+}
+
+// h4 {
+//   text-align: center;
+// }
+
+// .counter {
+//   padding: 10px;
+//   text-align: center;
+
+//   a {
+//     padding: 10px;
+//   }
+// }
+.counter {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+span {
+  display: inline-block;
+  border: 1px solid darken($bleed, 25);
+}
+.count {
+  border-radius: 10%;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  font-size: 2em;
+
+  &.positive {
+    color: green;
+  }
+
+  &.negative {
+    color: red;
+  }
+}
+
+.clicker {
+  cursor: pointer;
+  height: 33px;
+  line-height: 33px;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  background-color: $accentColor;
+  margin-top: 10px;
+}
